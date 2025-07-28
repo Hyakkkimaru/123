@@ -1,0 +1,96 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam classFontSize 12
+skinparam packageStyle rectangle
+
+package "UI" {
+    class MainWindow {
+        +InitializeComponent()
+        +ShowMessage(message: string)
+    }
+    
+    class MainViewModel {
+        -Repositories: ObservableCollection<RepositoryViewModel>
+        +CreateRepositoryCommand: ICommand
+        +DeleteRepositoryCommand: ICommand
+        +CloneRepositoryCommand: ICommand
+        +SyncRepositoryCommand: ICommand
+        +ConnectHostingCommand: ICommand
+    }
+    
+    class RepositoryViewModel {
+        +Name: string
+        +Description: string
+        +IsPrivate: bool
+        +HostingService: string
+        +LocalPath: string
+        +CloneUrl: string
+    }
+}
+
+package "Services" {
+    class RepositoryService {
+        +GetRepositories(hosting: string): Task<List<Repository>>
+        +CreateRepository(hosting: string, name: string, isPrivate: bool): Task<Repository>
+        +DeleteRepository(hosting: string, repositoryId: string): Task<bool>
+        +CloneRepository(repository: Repository, localPath: string): Task<bool>
+        +SyncRepository(repository: Repository): Task<bool>
+    }
+    
+    class GitService {
+        +Clone(url: string, localPath: string): Task<bool>
+        +Pull(localPath: string): Task<bool>
+        +Push(localPath: string): Task<bool>
+    }
+    
+    class AuthenticationService {
+        +Authenticate(hosting: string, credentials: AuthCredentials): Task<string>
+        +StoreToken(hosting: string, token: string): void
+    }
+}
+
+package "Models" {
+    class Repository {
+        +Id: string
+        +Name: string
+        +Description: string
+        +IsPrivate: bool
+        +HostingService: string
+        +CloneUrl: string
+        +LocalPath: string
+    }
+    
+    class AuthCredentials {
+        +Username: string
+        +Token: string
+    }
+}
+
+package "External" {
+    interface IHostingService {
+        +GetRepositories(): Task<List<Repository>>
+        +CreateRepository(name: string, isPrivate: bool): Task<Repository>
+        +DeleteRepository(repositoryId: string): Task<bool>
+    }
+    
+    class GitHostingService {
+        +GetRepositories(): Task<List<Repository>>
+        +CreateRepository(name: string, isPrivate: bool): Task<Repository>
+        +DeleteRepository(repositoryId: string): Task<bool>
+    }
+}
+
+' Основные связи
+MainWindow --> MainViewModel
+MainViewModel --> RepositoryViewModel
+MainViewModel --> RepositoryService
+MainViewModel --> AuthenticationService
+
+RepositoryService --> IHostingService
+GitHostingService ..|> IHostingService
+
+RepositoryService --> Repository
+RepositoryService --> GitService
+AuthenticationService --> AuthCredentials
+
+@enduml 

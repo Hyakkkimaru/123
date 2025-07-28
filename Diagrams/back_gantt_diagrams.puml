@@ -1,0 +1,73 @@
+@startgantt
+project starts 2024-01-08
+
+[Sprint 1] starts 2024-01-08 and lasts 14 days
+[Sprint 2] starts 2024-01-22 and lasts 14 days
+[Sprint 3] starts 2024-02-05 and lasts 14 days
+[Sprint 4] starts 2024-02-19 and lasts 14 days
+[Sprint 5] starts 2024-03-04 and lasts 14 days
+
+-- Подготовка бэкенда --
+[Настройка инфраструктуры] starts 2024-01-08 and lasts 2 days
+[Выбор .NET библиотек] starts 2024-01-08 and lasts 2 days
+[Настройка CI/CD] starts 2024-01-09 and lasts 3 days
+
+-- Sprint 1 (MVP GitHub) --
+[Базовая структура .NET] starts 2024-01-10 and lasts 3 days
+[GitHub OAuth интеграция] starts 2024-01-13 and lasts 4 days
+[GitHub API операции] starts 2024-01-15 and lasts 4 days
+[Тестирование MVP] starts 2024-01-19 and lasts 3 days
+
+-- Sprint 2 (Мультихостинг) --
+[GitFlic OAuth и API] starts 2024-01-22 and lasts 5 days
+[GitVerse OAuth и API] starts 2024-01-27 and lasts 5 days
+[Массовые операции] starts 2024-02-01 and lasts 4 days
+
+-- Sprint 3 (PWA Backend) --
+[REST API для веб-версии] starts 2024-02-05 and lasts 6 days
+[Синхронизация данных] starts 2024-02-11 and lasts 4 days
+[Оптимизация API] starts 2024-02-15 and lasts 4 days
+
+-- Sprint 4 (Тестирование) --
+[Модульные тесты] starts 2024-02-19 and lasts 4 days
+[Интеграционные тесты] starts 2024-02-23 and lasts 4 days
+[Оптимизация производительности] starts 2024-02-27 and lasts 3 days
+[Безопасность и шифрование] starts 2024-03-01 and lasts 3 days
+
+-- Sprint 5 (Релиз) --
+[Документация API] starts 2024-03-04 and lasts 4 days
+[Настройка деплоймента] starts 2024-03-08 and lasts 4 days
+[Финальное тестирование] starts 2024-03-12 and lasts 3 days
+[Подготовка к релизу] starts 2024-03-15 and lasts 3 days
+
+@endgantt
+
+@startgantt
+project starts 2024-01-08
+
+[Sprint 1] starts 2024-01-08 and lasts 5 days
+[Sprint 2] starts 2024-01-15 and lasts 5 days
+[Sprint 3] starts 2024-01-22 and lasts 5 days
+
+-- Подготовка фронтенда --
+[Анализ Avalonia UI] starts 2024-01-08 and ends 2024-01-08
+[Прототипирование UI] starts 2024-01-08 and ends 2024-01-08
+
+-- Sprint 1 (MVP Frontend) --
+[Базовый UI каркас] starts 2024-01-09 and lasts 1 days
+[Авторизация UI] starts 2024-01-10 and lasts 2 days
+[Список репозиториев] starts 2024-01-11 and lasts 1 days
+[Базовые операции UI] starts 2024-01-12 and lasts 1 days
+
+-- Sprint 2 (Frontend) --
+[Мультихостинг UI] starts 2024-01-15 and lasts 2 days
+[Фильтры и поиск] starts 2024-01-17 and lasts 2 days
+[UI массовых операций] starts 2024-01-19 and lasts 1 days
+
+-- Sprint 3 (Frontend) --
+[UX оптимизация] starts 2024-01-22 and lasts 2 days
+[Тестирование UI/UX] starts 2024-01-24 and lasts 1 days
+[Документация UI] starts 2024-01-25 and lasts 1 days
+[Подготовка к релизу] starts 2024-01-26 and lasts 1 days
+
+@endgantt 

@@ -1,0 +1,58 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam packageStyle rectangle
+
+package "UI" {
+    [Main Window] as MainWindow
+    [Repository List] as RepoList
+    [Settings] as Settings
+}
+
+package "Application" {
+    [Main ViewModel] as MainVM
+    [Repository ViewModel] as RepoVM
+}
+
+package "Services" {
+    [Repository Service] as RepoService
+    [Authentication Service] as AuthService
+    [Git Service] as GitService
+}
+
+package "External" {
+    [Git Hosting API] as GitHosting
+    [Local Git] as LocalGit
+}
+
+' Основные связи
+MainWindow --> MainVM
+RepoList --> RepoVM
+Settings --> AuthService
+
+MainVM --> RepoService
+MainVM --> AuthService
+RepoVM --> RepoService
+
+RepoService --> GitHosting
+RepoService --> GitService
+GitService --> LocalGit
+
+' Интерфейсы
+interface "IRepositoryService" as IRepoService
+interface "IAuthenticationService" as IAuthService
+
+RepoService ..|> IRepoService
+AuthService ..|> IAuthService
+
+MainVM --> IRepoService
+MainVM --> IAuthService
+
+note right of MainWindow
+  Главное окно приложения
+end note
+
+note right of RepoService
+  Управление репозиториями
+end note
+
+@enduml 

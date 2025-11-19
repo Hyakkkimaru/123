@@ -1,0 +1,44 @@
+@startgantt
+project starts 2024-01-08
+
+[Sprint 1] starts 2024-01-08 and lasts 14 days
+[Sprint 2] starts 2024-01-22 and lasts 14 days
+[Sprint 3] starts 2024-02-05 and lasts 14 days
+[Sprint 4] starts 2024-02-19 and lasts 14 days
+[Sprint 5] starts 2024-03-04 and lasts 14 days
+
+-- Подготовка фронтенда --
+[Анализ Avalonia UI] starts 2024-01-08 and lasts 2 days
+[Прототипирование UI] starts 2024-01-08 and lasts 3 days
+[Настройка MVVM архитектуры] starts 2024-01-10 and lasts 2 days
+
+-- Sprint 1 (MVP GitHub) --
+[Базовый UI каркас] starts 2024-01-11 and lasts 3 days
+[GitHub авторизация UI] starts 2024-01-14 and lasts 4 days
+[Список репозиториев GitHub] starts 2024-01-16 and lasts 3 days
+[Базовые операции UI] starts 2024-01-19 and lasts 3 days
+
+-- Sprint 2 (Мультихостинг) --
+[GitFlic интерфейс] starts 2024-01-22 and lasts 5 days
+[GitVerse интерфейс] starts 2024-01-27 and lasts 5 days
+[Фильтры и массовые операции] starts 2024-02-01 and lasts 4 days
+
+-- Sprint 3 (PWA Frontend) --
+[React/TypeScript setup] starts 2024-02-05 and lasts 3 days
+[PWA основной интерфейс] starts 2024-02-08 and lasts 5 days
+[Адаптивный дизайн] starts 2024-02-13 and lasts 3 days
+[Офлайн функционал] starts 2024-02-16 and lasts 3 days
+
+-- Sprint 4 (Тестирование) --
+[UI тестирование] starts 2024-02-19 and lasts 4 days
+[Кроссбраузерное тестирование] starts 2024-02-23 and lasts 4 days
+[UX оптимизация] starts 2024-02-27 and lasts 3 days
+[Доработка интерфейса] starts 2024-03-01 and lasts 3 days
+
+-- Sprint 5 (Релиз) --
+[Пользовательская документация] starts 2024-03-04 and lasts 4 days
+[Обучающие материалы] starts 2024-03-08 and lasts 4 days
+[Финальные UI правки] starts 2024-03-12 and lasts 3 days
+[Подготовка к релизу] starts 2024-03-15 and lasts 3 days
+
+@endgantt 

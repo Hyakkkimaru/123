@@ -1,0 +1,57 @@
+@startuml
+skinparam sequenceMessageAlign center
+skinparam responseMessageBelowArrow true
+
+actor User
+participant "UI" as UI
+participant "ViewModel" as VM
+participant "Repository Service" as RepoService
+participant "Git Hosting" as GitHosting
+participant "Git Service" as GitService
+
+== Подключение к хостингу ==
+
+User -> UI: Выбрать хостинг
+UI -> VM: ConnectHosting()
+VM -> RepoService: GetRepositories(hosting)
+RepoService -> GitHosting: GetRepositories()
+GitHosting --> RepoService: List<Repository>
+RepoService --> VM: List<Repository>
+VM --> UI: Обновить список
+UI --> User: Показать репозитории
+
+== Создание репозитория ==
+
+User -> UI: Создать репозиторий
+UI -> VM: CreateRepository(name, isPrivate)
+VM -> RepoService: CreateRepository(hosting, name, isPrivate)
+RepoService -> GitHosting: CreateRepository(name, isPrivate)
+GitHosting --> RepoService: Repository
+RepoService --> VM: Repository
+VM --> UI: Добавить в список
+UI --> User: Показать результат
+
+== Клонирование репозитория ==
+
+User -> UI: Клонировать репозиторий
+UI -> VM: CloneRepository(repository, path)
+VM -> GitService: Clone(url, path)
+GitService -> GitService: git clone
+GitService --> VM: success
+VM --> UI: Обновить статус
+UI --> User: Показать результат
+
+== Синхронизация репозитория ==
+
+User -> UI: Синхронизировать
+UI -> VM: SyncRepository(repository)
+VM -> GitService: Pull(path)
+GitService -> GitService: git pull
+GitService --> VM: success
+VM -> GitService: Push(path)
+GitService -> GitService: git push
+GitService --> VM: success
+VM --> UI: Обновить статус
+UI --> User: Показать результат
+
+@enduml 

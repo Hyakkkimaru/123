@@ -1,0 +1,100 @@
+@startgantt
+project starts 2024-01-08
+
+[Sprint 1] starts 2024-01-08 and lasts 5 days
+[Sprint 2] starts 2024-01-15 and lasts 5 days
+[Sprint 3] starts 2024-01-22 and lasts 5 days
+[Sprint 4] starts 2024-01-29 and lasts 5 days
+[Sprint 5] starts 2024-02-05 and lasts 5 days
+
+-- Подготовка --
+[Фронтенд: Анализ Avalonia UI] as [UI1] starts 2024-01-08 and ends 2024-01-08
+[Фронтенд: Прототипирование интерфейса] as [UI2] starts 2024-01-08 and ends 2024-01-08
+[Бэкенд: Анализ API хостингов] as [L1] starts 2024-01-08 and ends 2024-01-08
+[Бэкенд: Выбор .NET библиотек] as [L2] starts 2024-01-08 and ends 2024-01-08
+
+-- Sprint 1 (MVP GitHub) --
+[Фронтенд: Базовый UI каркас] as [UI3] starts 2024-01-09 and lasts 2 days
+[Фронтенд: Компоненты авторизации GitHub] as [UI4] starts 2024-01-09 and lasts 2 days
+[Бэкенд: Базовая структура .NET] as [L3] starts 2024-01-09 and lasts 2 days
+[Бэкенд: GitHub OAuth интеграция] as [L4] starts 2024-01-09 and lasts 2 days
+[Фронтенд: Список GitHub репозиториев] as [UI5] starts 2024-01-11 and lasts 2 days
+[Бэкенд: GitHub API операции] as [L5] starts 2024-01-11 and lasts 2 days
+[Фронтенд: MVP тестирование] as [UI6] starts 2024-01-13 and lasts 1 days
+[Бэкенд: API тестирование] as [L6] starts 2024-01-13 and lasts 1 days
+
+-- Sprint 2 (GitFlic) --
+[Фронтенд: GitFlic авторизация] as [UI7] starts 2024-01-15 and lasts 2 days
+[Бэкенд: GitFlic OAuth интеграция] as [L7] starts 2024-01-15 and lasts 2 days
+[Фронтенд: GitFlic репозитории] as [UI8] starts 2024-01-17 and lasts 2 days
+[Бэкенд: GitFlic API интеграция] as [L8] starts 2024-01-17 and lasts 2 days
+[Фронтенд: Тестирование GitFlic] as [UI9] starts 2024-01-19 and lasts 1 days
+[Бэкенд: Тестирование GitFlic API] as [L9] starts 2024-01-19 and lasts 1 days
+
+-- Sprint 3 (GitVerse) --
+[Фронтенд: GitVerse авторизация] as [UI10] starts 2024-01-22 and lasts 2 days
+[Бэкенд: GitVerse OAuth интеграция] as [L10] starts 2024-01-22 and lasts 2 days
+[Фронтенд: GitVerse репозитории] as [UI11] starts 2024-01-24 and lasts 2 days
+[Бэкенд: GitVerse API интеграция] as [L11] starts 2024-01-24 and lasts 2 days
+[Фронтенд: Тестирование GitVerse] as [UI12] starts 2024-01-26 and lasts 1 days
+[Бэкенд: Тестирование GitVerse API] as [L12] starts 2024-01-26 and lasts 1 days
+
+-- Sprint 4 (Расширенный функционал) --
+[Фронтенд: Массовые операции UI] as [UI13] starts 2024-01-29 and lasts 2 days
+[Бэкенд: Массовые операции логика] as [L13] starts 2024-01-29 and lasts 2 days
+[Фронтенд: Фильтры и поиск] as [UI14] starts 2024-01-31 and lasts 2 days
+[Бэкенд: Поисковая логика] as [L14] starts 2024-01-31 and lasts 2 days
+[Фронтенд: Тестирование функционала] as [UI15] starts 2024-02-02 and lasts 1 days
+[Бэкенд: Тестирование API] as [L15] starts 2024-02-02 and lasts 1 days
+
+-- Sprint 5 (Финализация) --
+[Фронтенд: UX оптимизация] as [UI16] starts 2024-02-05 and lasts 2 days
+[Бэкенд: Оптимизация производительности] as [L16] starts 2024-02-05 and lasts 2 days
+[Фронтенд: Финальное тестирование] as [UI17] starts 2024-02-07 and lasts 1 days
+[Бэкенд: Безопасность и шифрование] as [L17] starts 2024-02-07 and lasts 1 days
+[Фронтенд: Документация] as [UI18] starts 2024-02-08 and lasts 1 days
+[Бэкенд: Документация API] as [L18] starts 2024-02-08 and lasts 1 days
+[Фронтенд: Подготовка к релизу] as [UI19] starts 2024-02-09 and lasts 1 days
+[Бэкенд: Подготовка к релизу] as [L19] starts 2024-02-09 and lasts 1 days
+
+[UI1] is colored in LightBlue
+[UI2] is colored in LightBlue
+[UI3] is colored in LightBlue
+[UI4] is colored in LightBlue
+[UI5] is colored in LightBlue
+[UI6] is colored in LightBlue
+[UI7] is colored in LightBlue
+[UI8] is colored in LightBlue
+[UI9] is colored in LightBlue
+[UI10] is colored in LightBlue
+[UI11] is colored in LightBlue
+[UI12] is colored in LightBlue
+[UI13] is colored in LightBlue
+[UI14] is colored in LightBlue
+[UI15] is colored in LightBlue
+[UI16] is colored in LightBlue
+[UI17] is colored in LightBlue
+[UI18] is colored in LightBlue
+[UI19] is colored in LightBlue
+
+[L1] is colored in LightGreen
+[L2] is colored in LightGreen
+[L3] is colored in LightGreen
+[L4] is colored in LightGreen
+[L5] is colored in LightGreen
+[L6] is colored in LightGreen
+[L7] is colored in LightGreen
+[L8] is colored in LightGreen
+[L9] is colored in LightGreen
+[L10] is colored in LightGreen
+[L11] is colored in LightGreen
+[L12] is colored in LightGreen
+[L13] is colored in LightGreen
+[L14] is colored in LightGreen
+[L15] is colored in LightGreen
+[L16] is colored in LightGreen
+[L17] is colored in LightGreen
+[L18] is colored in LightGreen
+[L19] is colored in LightGreen
+
+@endgantt 
